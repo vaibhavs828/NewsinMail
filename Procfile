@@ -1,0 +1,1 @@
+web: gunicorn newsMail.wsgi --log-file -
