@@ -49,3 +49,16 @@ body{
     display: block;
     float: right;
 }*/
+@media only screen and (max-width: 1200px) {
+    .jumbotron {
+      width: 400px !important;
+      height: 350px !important;
+    }
+  }
+
+@media only screen and (max-width: 650px) {
+    .jumbotron {
+      width: 300px !important;
+      height: 450px !important;
+    }
+  }
