@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'p41%-a#z4wzoj6))dzad6z(btx^7jaezxi15%i55(ord9^@i!+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = TRUE
+DEBUG = True
 
 ALLOWED_HOSTS = ['newsinmail.herokuapp.com', '127.0.0.1']
 
