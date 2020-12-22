@@ -15,14 +15,25 @@ def main():
     #Storing Date
 
     td = datetime.date.today()
+    
+    #Assign path variables
+    GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
+    CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
 
     #web-driver for chrome
 
     wait_time = 10#waits for 10 seconds to get the news//if possible will take less time
-    chr_op = webdriver.ChromeOptions()
-    chr_op.add_experimental_option('useAutomationExtension',False)#The useAutomationExtension: false option disables    the driver to install other chrome extensions, such as CaptureScreenshot and others.
-    chr_op.add_argument('--start-maximized')
-    driver = webdriver.Chrome(r'C:\Users\vaibh\OneDrive\Desktop\chromedriver.exe',options=chr_op)
+    #chr_op = webdriver.ChromeOptions()
+    #chr_op.add_experimental_option('useAutomationExtension',False)#The useAutomationExtension: false option disables    the driver to install other chrome extensions, such as CaptureScreenshot and others.
+    #chr_op.add_argument('--start-maximized')
+    #driver = webdriver.Chrome(r'C:\Users\vaibh\OneDrive\Desktop\chromedriver.exe',options=chr_op)
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument('--disable-gpu')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.binary_location = GOOGLE_CHROME_PATH
+    
+    #Building the browser
+    driver = webdriver.Chrome(execution_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
 
     #Connection to google news
     print('Collecting news from Google News...\n')
@@ -37,7 +48,7 @@ def main():
     elements = driver.find_elements_by_tag_name('h3')
 
     #Writing in a text file
-    file_loc = r'C:\Users\vaibh\OneDrive\Desktop\newsfile.txt'
+    file_loc = 'newsfile.txt'
     file_to_write = open(file_loc,'w+')
     file_to_write.write("Today's Top News Headlines\n")
     ind = 1
