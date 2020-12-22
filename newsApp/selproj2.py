@@ -41,7 +41,8 @@ def main():
     elements = driver.find_elements_by_tag_name('h3')
 
     #Writing in a text file
-    file_loc = 'newsfile.txt'
+    #file_loc = 'newsfile.txt'
+    file_loc = 'newsApp/static/textfile.txt'
     file_to_write = open(file_loc,'w+')
     file_to_write.write("Today's Top News Headlines\n")
     ind = 1
