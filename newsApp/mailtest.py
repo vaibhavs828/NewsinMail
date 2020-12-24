@@ -1,37 +1,3 @@
-#def main():
-#    import smtplib
-#    from email.message import EmailMessage
-#    import os
-#    EMAIL_HOST = 'vaibhavlucky991@gmail.com'
-#    EMAIL_PASSWORD = 'pass12345@#'
-#    USER_EMAIL = 'vaibhavs828@gmail.com'
-#
-#    # Compose message
-#    msg = EmailMessage()
-#    msg['From'] = EMAIL_HOST
-#    msg['To']   = USER_EMAIL
-#    msg['Subject'] = " Check if this is in html>>"
-#
-#    msg.set_content('This is a plain text email')
-#
-#    msg.add_alternative("""\
-#    <!DOCTYPE html>
-#    <html>
-#        <body>
-#            <h1 style="color:SlateGray;">This is an HTML Email!</h1>
-#        </body>
-#    </html>
-#    """, subtype='html')
-#
-#    with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-#        smtp.login(EMAIL_HOST, EMAIL_PASSWORD)
-#        smtp.send_message(msg)
-#
-#if __name__ == "__main__":
-#    main()
-
-
-
 #NAYI SHURUAT
 
 def main():
@@ -60,21 +26,6 @@ def main():
     driver.implicitly_wait(wait_time)
     elements = driver.find_elements_by_tag_name('h3')
 
-    #EMAIL_HOST = 'vaibhavlucky991@gmail.com'
-    #EMAIL_PASSWORD = 'pass12345@#'
-    #USER_EMAIL = 'vaibhavs828@gmail.com'
-
-    # Compose message
-    #msg = EmailMessage()
-    #msg['From'] = EMAIL_HOST
-    #msg['To']   = USER_EMAIL
-    #msg['Subject'] = " Hello ! Today's TOP news HEADLINES >>"
-
-
-    # Body of email  
-    #msg.set_content("News News News .. ")
-
-    print ("Have a Nice Day !!")
 
     #Saving into string
     news = ''
@@ -172,9 +123,7 @@ def main():
 
 
 
-    #with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-    #    smtp.login(EMAIL_HOST, EMAIL_PASSWORD)
-    #    smtp.send_message(msg)
+
 
 
 if __name__ == "__main__":
