@@ -13,11 +13,13 @@ def main():
     #web-driver for chrome
 
     wait_time = 10 #waits for 10 seconds to get the news//if possible will take less time
-    chr_op = webdriver.ChromeOptions()
-    chr_op.add_experimental_option('useAutomationExtension',False)#The useAutomationExtension: false option     disables the driver to install other chrome extensions, such as CaptureScreenshot and others.
-    chr_op.add_argument('--start-maximized')
-    driver = webdriver.Chrome(r'C:\Users\vaibh\OneDrive\Desktop\chromedriver.exe',options=chr_op)
-
+    op = webdriver.ChromeOptions()
+    op.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    op.add_argument("--headless")
+    op.add_argument("--no-sandbox")
+    op.add_argument("--disable-dev-sh-usage")
+    
+    driver = webdriver.Chrome(executable_path = os.environ.get("CHROMEDRIVER_PATH"), chrome_options=op)
     #Connection to google news
     print('Collecting news from Google News...\n')
     google_news = "https://news.google.com/topstories?hl=en-IN&gl=IN&ceid=IN:en"
