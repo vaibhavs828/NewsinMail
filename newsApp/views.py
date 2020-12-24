@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from newsApp.models import Contact
-from newsApp import selproj2
-from newsApp import myEnvVar
+from newsApp import mailtest
+from django.core.mail import send_mail
+from django.conf import settings
 
 # Create your views here.
 
@@ -23,7 +24,7 @@ def subscription(request):
         contact.email = email
         contact.frequency = frequency
         contact.save()
-        selproj2.main()
+        mailtest.main()
         return HttpResponse("<h1>Thanks for subscribing</h1>")
 
     return render(request, 'news/subscription.html')
