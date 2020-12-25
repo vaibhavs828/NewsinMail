@@ -112,6 +112,8 @@ def main():
     </html>
     """#, subtype='html')
     send_mail(subject, message, from_email, ['vaibhavs828@gmail.com'], fail_silently=True,html_message=html_message)
+    
+    print("mail sent")
 
 
 
