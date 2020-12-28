@@ -13,7 +13,7 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!--External css-->
     <link rel="stylesheet" href="/static/subscription.css">
-    <title>Hello, world!</title>
+    <title>NewsinMail</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
     </nav>
 
 
-    <form class="w-50 float-end p-4 m-3" id="form" method="POST">
+    <form class="float-end p-4 m-3" id="form" method="POST">
         {% csrf_token %}
         <div class="form-group">
             <label for="exampleFormControlInput1">Name</label>
@@ -38,58 +38,37 @@
         <div class="form-group">
             <label for="exampleFormControlInput1">Email address</label>
             <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
-                placeholder="name@example.com">
+                placeholder="name@example.com" required>
         </div>
         <br>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Select your interests : </label>
             <br>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Top News</label>
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="topnews">
+                <label class="form-check-label" for="inlineCheckbox1">Headlines</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">World News</label>
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="wnews" >
+                <label class="form-check-label" for="inlineCheckbox2 ">World News</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                <label class="form-check-label" for="inlineCheckbox3">Business News</label>
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="bnews" >
+                <label class="form-check-label" for="inlineCheckbox3 ">Business News</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-                <label class="form-check-label" for="inlineCheckbox4">Sports News</label>
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" name="snews" >
+                <label class="form-check-label" for="inlineCheckbox4 ">Sports News</label>
             </div>
         </div>
         <br>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1">Frequency : </label>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="frequency" id="exampleRadios1" value="daily"
-                    checked>
-                <label class="form-check-label" for="exampleRadios1">
-                    Daily
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="frequency" id="exampleRadios1" value="six"
-                    >
-                <label class="form-check-label" for="exampleRadios1">
-                    Every 6 hours
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="frequency" id="exampleRadios1" value="two"
-                    >
-                <label class="form-check-label" for="exampleRadios1">
-                    Every 2 hours
-                </label>
-            </div>
-        </div>
-        <br>
+                
         <center><button type="submit" class="btn btn-outline-dark">Submit</button></center>
     </form>
 
+    <div class="footer">
+    <p>Developer : <a href="https://www.linkedin.com/in/vaibhav-sharma-7938711b7/">Vaibhav Sharma</a></p>
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

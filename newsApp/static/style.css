@@ -45,20 +45,26 @@ body{
 .info{
     font-family: 'Baloo Thambi 2', cursive;
 }
+.footer{
+    background-color: transparent;
+    display: inline-block;
+    text-align: right;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    height: 35px;
+    padding-top: 5px;
+    padding-right: 20px;
+    width: 100%;
+    margin: 0px;
+}
+.footer a{
+    text-decoration: none;
+    color: black;
+}
+
 /*#x{
     display: block;
     float: right;
 }*/
-@media only screen and (max-width: 1200px) {
-    .jumbotron {
-      width: 400px !important;
-      height: 350px !important;
-    }
-  }
-
-@media only screen and (max-width: 650px) {
-    .jumbotron {
-      width: 300px !important;
-      height: 450px !important;
-    }
-  }

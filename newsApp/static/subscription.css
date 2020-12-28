@@ -28,5 +28,26 @@ body{
     padding: 15px !important;
 }
 
-
-
+@media screen and (max-width:450px){
+    form{
+        width: 300px !important;
+    }
+}
+.footer{
+    background-color: transparent;
+    display: inline-block;
+    text-align: right;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    height: 35px;
+    padding-top: 5px;
+    padding-right: 20px;
+    width: 100%;
+    margin: 0px;
+}
+.footer a{
+    text-decoration: none;
+    color: black;
+}
