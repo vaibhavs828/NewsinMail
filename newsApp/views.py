@@ -20,7 +20,6 @@ def subscription(request):
         name = request.POST.get('name')
         email = request.POST.get('email')
         reciever = email #the email which is feeded into form
-        frequency = request.POST.get('frequency')
         topnews = request.POST.get('topnews')
         if topnews == "on":
             topnews = True
