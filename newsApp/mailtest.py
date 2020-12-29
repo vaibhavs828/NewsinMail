@@ -32,7 +32,6 @@ def main(reciever,headlines,world,business,sports):
     if headlines == True:
         print('Collecting news from Google News...\n')
         google_news = "https://news.google.com/topstories?hl=en-IN&gl=IN&ceid=IN:en"
-
         driver.get(google_news)
         driver.implicitly_wait(wait_time)
         elements = driver.find_elements_by_tag_name('h3')
@@ -48,7 +47,7 @@ def main(reciever,headlines,world,business,sports):
 
     if world == True:
         print("Collecting World news\n")
-        driver.get('https://news.google.com/topics/ CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx1YlY4U0FtVnVHZ0pKVGlnQVABhl=en-IN&gl=IN&ceid=IN%3Aen')
+        driver.get('https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx1YlY4U0FtVnVHZ0pKVGlnQVAB?hl=en-IN&gl=IN&ceid=IN%3Aen')
         driver.implicitly_wait(wait_time)
         element2 = driver.find_elements_by_tag_name('h3')
         #Saving into string
